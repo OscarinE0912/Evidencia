@@ -2,7 +2,7 @@ package EvidenciaFinal;
 
 import java.util.Scanner;
 
-public class Metodo_BiSecante {
+public class Metodo_Biseccion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //Variables Iniciales
