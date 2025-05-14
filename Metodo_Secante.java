@@ -35,16 +35,19 @@ public class Metodo_Secante {
             //Hacer la multiplicacion de funciones
             fxr_fxa = fxa*fxr;
 
-            System.out.println("xa: "+xa+" xb: "+xb+" xr: "+xr+" f(xa): "+fxa+" f(xr): "+fxr+" f(xa)f(xr): "+fxr_fxa+" Ea: "+Ea);
+            System.out.printf("Iteración %d: xa=%.6f xb=%.6f xr=%.6f f(xa)=%.6f f(xr)=%.6f fxa*fxr=%.6f Ea=%.6f%%\n",
+            iteracion + 1, xa, xb, xr, fxa, fxr, fxr_fxa, Ea * 100);
 
-            //Condicional para cambiar xa o xb
-            if(fxr_fxa < 0){
-                xa=xr;
-            } else{
-                xb=xr;
+            
+            // Decidir nuevo intervalo
+            if (fxr_fxa < 0) {
+                xb = xr;
+            } else {
+                xa = xr;
             }
 
-            iteracion+=1;
+            iteracion++;
+            
         } while (Ea > 0.01);
     }
 
