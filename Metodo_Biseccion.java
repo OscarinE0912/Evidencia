@@ -48,12 +48,12 @@ public class Metodo_Biseccion {
 
             iteracion++;
             
-        } while (Ea > 0.01);
+        } while (Ea > 0.0001);
     }
 
     //Función del problema
-    public static double Funcion(double num){
-        return Math.pow(num, 3) - (4 * num) - 9;
+    public static double Funcion(double num) {
+        return Math.exp(-num) - num;
     }
 
     //Error Porcentual
